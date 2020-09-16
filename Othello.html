@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" charset="utf-8">
+<link href="Othello.css" rel="stylesheet" type="text/css">
+<html>
+
+<head>
+    <title>オセロ</title>
+</head>
+
+<body>
+    <table id="field"></table>
+
+    <p id="view_tarn"></p>
+
+    <button type="button" id="ban_init">やり直し</button>
+    <button type="button" id="pass">パス</button>
+    <script type="text/javascript" src="Othello.js"></script>
+
+    <!--
+        0. オセロを眺める
+        石が一つも置かれていない緑の盤面、やり直しボタンが表示されていることを確認してください。
+        
+        1. 初期表示
+        初期状態が
+            ○●
+            ●○
+        （○：白、●：黒）
+        と表示されるように石を配置してください。
+        ○、●はそれぞれ文字列で"○"、"●"で表示するものとします。
+        ただ、"○"のままだと正直見ずらいので、白も●にしてcolorを変更することをお勧めします。
+        ※対象メソッド：ban_init()、ban_set()
+
+        2. 石の配置と裏返し
+        石を配置したいマスをクリックした時に、石が置ける場合は石を配置。
+        置けない場合は何もしないでください。
+
+        check_reverse()：
+        line_reverse()を8方向分呼び出し、各方向へリバースできるか確認する。
+
+        line_reverse():
+        指定したセルから指定した方向に可能であれば石を裏返す。
+        （当然、盤の端、石がない等は裏返せない）
+
+        ※対象メソッド：check_reverse()、line_reverse()
+
+        3. 手番の変更
+          3-1. 手番の表示
+          盤面の下にどちらの手番かを表示する。初手は黒からとする。
+          （例：黒の番です）
+
+          3-2. 石が置けるかの確認 
+          手番を交代して、置けるところがあるか確認する。
+          白と黒の数の合計が64の場合、それぞれの個数に応じて、勝敗を決定し、結果をalertで表示する。
+          置ける場所がない場合は、相手に手番を移す。その場合もその旨をalertで表示する。
+
+          3-3. 手番の表示変更
+          問題なければ、手番を変更し、画面下部の手番表示の文言を変更する。
+
+          ※対象メソッド：change_turn()
+
+
+    -->
+</body>
+
+</html>
